@@ -16,6 +16,11 @@ describe('Hero Test', function(){
 
 it('hero should be able to talk', function(){
   assert.strictEqual("Hurah!", hero.talk())
-})
+});
+
+it('hero can take damage', function (){
+  hero.damage(10)
+  assert.strictEqual(90, hero.health)
+});
 
 })

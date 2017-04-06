@@ -17,9 +17,13 @@ Hero.prototype = {
     }
   if(this.health > 100){
       this.health = 100
-    }
-    
+    }  
+  },
+
+  damage: function(amount){
+    this.health -= amount;
   }
+
 }
 
 
