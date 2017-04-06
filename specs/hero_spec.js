@@ -39,6 +39,10 @@ it('favourite food should give health bonus', function(){
 it('hero cant go over 100 health', function(){
   hero.eat(food1);
   assert.strictEqual(100, hero.health)
+});
+
+it('tasks are empty', function(){
+  assert.strictEqual(0 , hero.tasks.length)
 })
 
 

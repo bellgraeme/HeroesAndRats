@@ -5,6 +5,11 @@ this.reward = reward;
 this.completed = false;
 }
 
+// Task.prototype = {
+//   sort
+
+
+// }
 
 
 

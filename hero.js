@@ -19,9 +19,11 @@ Hero.prototype = {
       this.health = 100
     }  
   },
-
   damage: function(amount){
     this.health -= amount;
+  },
+  addTask: function(task){
+    this.tasks.push(task)
   }
 
 }
