@@ -27,6 +27,14 @@ it('food can add health', function(){
   hero.damage(99)
   hero.eat(food2)
   assert.strictEqual(4, hero.health)
+});
+
+it('favourite food should give health bonus', function(){
+  hero.damage(20)
+  hero.eat(food1)
+  
+  assert.strictEqual(95, hero.health)
 })
+
 
 })

@@ -10,8 +10,10 @@ Hero.prototype = {
     return "Hurah!"
   },
   eat: function(food){
-    if(this.favFood === food){
-    this.health += (food.nourishment*1.5)}
+    if(this.favFood === food.name){
+      console.log('eaten')
+      var eaten = food.nourishment*1.5
+    this.health += eaten}
     else{
       this.health += food.nourishment
     }
