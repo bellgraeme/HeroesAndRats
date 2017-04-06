@@ -6,11 +6,12 @@ var Task = function(quest,difficulty,urgency,reward){
   this.completed = false;
 }
 
-// Task.prototype = {
-//   sort
+Task.prototype = {
+ completeTask: function(task){
+   this.completed = true
+ },
 
-
-// }
+}
 
 
 

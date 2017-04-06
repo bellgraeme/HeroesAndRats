@@ -51,7 +51,14 @@ it('tasks are empty', function(){
 it('can add task', function(){
   hero.addTask(task)
   assert.strictEqual(1, hero.tasks.length)
+});
+
+it('task can be completed', function(){
+  hero.addTask(task)
+  hero.completeTask(task)
+  assert.strictEqual(true, task.completed)
 })
+
 
 
 })

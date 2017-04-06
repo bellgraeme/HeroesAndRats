@@ -24,7 +24,42 @@ Hero.prototype = {
   },
   addTask: function(task){
     this.tasks.push(task)
-  }
+  },
+  completeTask: function(tobecompleted){
+    this.tasks.forEach(function(task){
+      if(task === tobecompleted){
+        task.completeTask()
+      }
+    })
+  },
+  sortTaskByReward: function(type){
+    return _.filter(this.tasks, function(task){
+      if(task.reward === type){
+        return task}
+      })
+  },
+  sortTaskByDifficulty: function(type){
+    return _.filter(this.tasks, function(task){
+      if(task.difficulty === type){
+        return task
+      }
+    })
+  },
+  sortTaskByUrgency: function(type){
+    return _.filter(this.tasks, function(task){
+      if(task.urgency === type){
+        return task
+      }
+    })
+  },
+  sortTaskByCompleted: function(type){
+    return _.filter(this.tasks, function(task){
+      if(task.completed === type){
+        return task
+      }
+    })
+  },
+
 
 }
 
