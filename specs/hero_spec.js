@@ -1,17 +1,20 @@
 var assert = require('assert');
 var Hero = require ('../hero.js');
-var Food = require('../food.js')
+var Food = require('../food.js');
+var Task = require('../task.js');
 
 describe('Hero Test', function(){
 
   var hero;
   var food1;
   var food2;
+  var task;
 
   beforeEach(function( ){
     hero = new Hero("Arnold", "Courgette")
     food1 = new Food("Courgette", 10)
     food2 = new Food("Steak", 3)
+    task = new Task("cleaning", "mega", "pant splitting", "catharsis")
   })
 
 it('hero should be able to talk', function(){
@@ -43,6 +46,11 @@ it('hero cant go over 100 health', function(){
 
 it('tasks are empty', function(){
   assert.strictEqual(0 , hero.tasks.length)
+})
+
+it('can add task', function(){
+  hero.addTask(task)
+  assert.strictEqual(1, hero.tasks.length)
 })
 
 
